@@ -37,15 +37,16 @@ console.log(compare(person,person2));
 // Write a JavaScript function to find the common elements from two arrays
 // console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 // ["1", "2"] 
+
 function difference(arr1,arr2){
     let result = [];
-    arr1.forEach(function (element){
+    arr1.forEach((element) => {
         if(arr2.indexOf(element) != -1){
-            if(this.indexOf(element) == -1){
-            this.push(element);
+            if(result.indexOf(element) == -1){
+            result.push(element);
             }
         }
-    },result);
+    });
     return result;
 }
 console.log(difference([1, 2, 3], [100, 2, 1, 10]));
